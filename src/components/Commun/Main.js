@@ -1,6 +1,6 @@
 import React , { useState,useEffect} from 'react';
 import '../../App.css';
-import '../../appMobile.css'
+import '../../appResponsive.css';
 import imgActualite from '../../media/img/fd_actualite.jpg'
 import imgQsn from '../../media/img/fd_qsn.jpg'
 import imgContact from '../../media/img/fd_contact.jpg'
