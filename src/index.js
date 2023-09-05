@@ -8,10 +8,10 @@ import { UserContextProvider } from './context/userContext';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from './Routes/ErrorPage';
-import Connexion from './components/pages/Connexion/Connexion';
-import Inscription from './components/pages/Inscription/Inscription';
-import Profil from './components/pages/Profil/Profil';
-import Contact from './components/pages/Contact/Contact';
+import Connexion from './Routes/Connexion';
+import Inscription from './Routes/Inscription';
+import Profil from './Routes/Profil';
+import Contact from './Routes/Contact';
 
 const router = createBrowserRouter([
   {
