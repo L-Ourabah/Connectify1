@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../../../App.css';
-import '../../../../appMobile.css'
+import '../../../../appResponsive.css';
 
 export default function Main(){
 
