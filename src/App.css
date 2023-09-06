@@ -118,7 +118,7 @@ a.btn_deconnexion:active{
 .overlay .closebtn {
   position: absolute;
   font-size: 46px;
-  top: 50%;
+  top: 0%;
   right: 35px;
   font-weight: 700;
   background-color:#20835D ;
