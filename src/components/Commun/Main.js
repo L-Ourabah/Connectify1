@@ -117,7 +117,7 @@ Notre objectif est de créer un espace numérique où chacun peut se sentir libr
 
 
         {/*section news*/}
-        <section class="news">
+        <section className="news">
 
 <div className="content_news">
     <h2>Newsletter</h2>
