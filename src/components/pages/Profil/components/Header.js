@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../../../../App.css';
 import '../../../../appResponsive.css';
 import { Link } from 'react-router-dom';
@@ -42,9 +42,9 @@ export default function Header() {
       </nav>
       <div className='banniere'>
         <div className='card_profil'>
-          <div class="image-container">
+          <div className="image-container">
             <img id="img" src="https://picsum.photos/seed/picsum/200/300" height="300" width="300" />
-            <button id="editButton" class="hidden">Modifier l'image</button>
+            <button id="editButton" className="hidden">Modifier l'image</button>
           </div>
         </div>
       </div>
