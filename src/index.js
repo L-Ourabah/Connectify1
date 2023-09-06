@@ -1,56 +1,40 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { createRoot } from 'react-dom/client'; // Utilisez createRoot depuis react-dom/client
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { UserContextProvider } from './context/userContext';
-
-
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from './Routes/ErrorPage';
 import Connexion from './Routes/Connexion';
 import Inscription from './Routes/Inscription';
 import Profil from './Routes/Profil';
 import Contact from './Routes/Contact';
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    errorElement: <ErrorPage />
-  },
-  {
-    path: "connexion",
-    element: <Connexion />
-  },
-  {
-    path: "inscription",
-    element: <Inscription />
-  },
-  {
-    path: "profil",
-    element: <Profil />
-  },
-  {
-    path: "contact",
-    element: <Contact />
-  }
-])
+const root = document.getElementById('root');
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
+const appRoot = createRoot(root);
+
+appRoot.render(
+  
     <UserContextProvider>
-
-      <RouterProvider router={router} />
-
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="connexion" element={<Connexion />} />
+          <Route path="inscription" element={<Inscription />} />
+          <Route path="profil" element={<Profil />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      </BrowserRouter>
     </UserContextProvider>
-  </React.StrictMode>
-
-
+  
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
+
+
