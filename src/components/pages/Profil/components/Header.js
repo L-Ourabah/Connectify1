@@ -2,6 +2,7 @@ import React from 'react';
 import '../../../../App.css';
 import '../../../../appResponsive.css';
 import { Link } from 'react-router-dom';
+import SectionProfil from './sectionProfil';
 
 
 
@@ -40,15 +41,9 @@ export default function Header() {
           </div>
         </div>
       </nav>
-      <div className='banniere'>
-        <div className='card_profil'>
-          <div className="image-container">
-            <img id="img" src="https://picsum.photos/seed/picsum/200/300" height="300" width="300" />
-            <button id="editButton" className="hidden">Modifier l'image</button>
-          </div>
-        </div>
-      </div>
-
+      <SectionProfil />
+    
+       
     </header>
   );
 }
