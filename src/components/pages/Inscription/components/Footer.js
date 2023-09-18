@@ -1,6 +1,7 @@
 
 import React from 'react';
 import '../../../../App.css';
+import '../../../../appResponsive.css';
 
 
 function Footer(){
