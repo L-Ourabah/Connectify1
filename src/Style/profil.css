@@ -1,0 +1,421 @@
+/***********nav bar*******/
+
+.navbar_profil {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #20835D;
+    height: 10%;
+    padding: 2%;
+}
+
+
+.header_profil {
+    height: 650px;
+    background: url('../media/img/banner_profil.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*********************sectionProfil******************/
+
+.banniere {
+    height: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cardProfil {
+    background: rgb(190 186 186 / 42%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    width: 80%;
+    height: 386px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.image-container {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.image-container img {
+
+    height: 335px;
+    border-radius: 50%;
+
+}
+
+.image-container button {
+
+    width: 13%;
+
+    margin-left: 44%;
+    border-radius: 50%;
+    height: 27px;
+    background-color: #100c0c;
+    border: 1px solid black;
+
+}
+
+.image-container input {
+    display: none;
+}
+
+
+.name {
+
+    display: flex;
+    gap: 10%;
+}
+
+
+#profile-lastname,
+#profile-firstname {
+    font-size: 2em;
+}
+
+/*******************mainProfil*********************/
+
+
+
+#profile-main-flex {
+    display: flex;
+    justify-content: space-around;
+
+    width: 100%;
+}
+
+
+#profile-section-nav {
+    width: 13%;
+    height: 52px;
+    margin-left: 10%;
+    margin-top: 11%;
+    font-size: 2em;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+
+/********section profile controle**********************/
+
+
+#profile-section-nav>li.active {
+    background-color: rgb(98, 98, 13);
+}
+
+#profile-section-nav>li {
+    background-color: yellow;
+    border: 2px solid rgb(227, 195, 12);
+    width: 200px;
+    text-align: center;
+    padding: 2%;
+
+}
+#profile-wall{
+    margin-bottom: 5%;
+}
+
+#profile-music-flex {
+    margin-bottom: 5%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile-music-item {
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 2%;
+    width: 30%;
+    margin: 2%;
+    border-radius: 25px;
+
+}
+
+#profile-music>div.option-music {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+}
+
+#profil-post-section {
+    width: 70%;
+}
+
+#profile-gallery>div.option-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+}
+
+#profile-wall-render {
+    width: 50%;
+    margin-left: 27%;
+    height: 250px;
+    background-color: rgb(87, 104, 87);
+    padding-top: 1%;
+}
+
+#profile-wall-sender {
+
+    width: 48%;
+    margin-left: 27%;
+    height: 80px;
+    background-color: green;
+    padding-left: 2%;
+
+}
+
+#profile-wall-sender>button {
+    height: 34px;
+    width: 10%;
+}
+
+#profile-wall-sender input[type='text'] {
+    width: 75%;
+    height: 41%;
+    border-radius: 6px;
+    border: none;
+    margin-right: 3%;
+    margin-top: 4%;
+    margin-left: 3%;
+}
+
+#profile-wall-render>div {
+    background-color: white;
+    margin: 2%;
+    height: 11%;
+    padding: 2%;
+    border-radius: 5px;
+}
+
+
+
+#profile-music>h2,
+#profile-wall>h2,
+#profile-gallery>h2,
+#profile-video>h2 {
+    text-align: center;
+    color: rgb(230, 211, 37);
+    font-size: 3em;
+}
+
+#profile-gallery>div.option-gallery>button,
+#profile-video>div.option-video>button,
+#profile-music>div.option-music>button {
+    background-color: green;
+    width: 15%;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid yellow;
+
+}
+
+
+#profile-video>div.option-video {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+
+}
+
+
+#profile-video>div.option-video>input[type=text] {
+    background-color: rgb(219, 208, 208);
+}
+
+#profile-music > div.option-music > input[type=text]{
+    background-color: rgb(219, 208, 208);
+}
+
+#profile-gallery>div.option-gallery>label>input[type=file] {
+    display: none;
+}
+
+#profile-gallery-flex {
+    margin-bottom: 5%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile-gallery>div.profile-gallery-flex>img {
+    width: 35%;
+    margin: 3%
+}
+
+#profile-gallery>div.profile-gallery-flex {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 3%;
+
+}
+
+
+
+#profile-video-flex>div {
+    margin-bottom: 5%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile-video-flex>div>video {
+    height: 450px;
+}
+
+
+@media (max-width:760px) {
+    #profile-main-flex {
+        flex-direction: column;
+    }
+
+    #profile-section-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        font-size: 1.3em;
+        margin-left: 0;
+        margin-bottom: -94px;
+        margin-top: -76px;
+        height: 217px;
+    }
+
+    #profil-post-section {
+        width: 100%;
+    }
+
+
+
+    .cardProfil {
+        flex-direction: column;
+    }
+
+
+
+    #profil-post-section {
+        width: 100%;
+    }
+
+    #profile-wall-render {
+        width: 50%;
+        margin-left: 27%;
+        height: 250px;
+        background-color: rgb(87, 104, 87);
+        padding-top: 1%;
+    }
+
+
+
+    #profil-post-section {
+        width: 100%;
+    }
+
+    #profile-wall-render {
+        width: 83%;
+        margin-left: 0%;
+        height: 250px;
+
+    }
+
+    #profile-wall-sender {
+        width: 81%;
+        margin-left: 0%;
+
+
+    }
+
+    #profile-wall {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #profile-video-flex>div>video {
+        height: 205px;
+        width: 80%;
+    }
+
+    .profile-music-item {
+
+        width: 80%;
+
+    }
+
+    #profile-music-flex>div>audio {
+        width: 80%;
+    }
+
+    #profile-music>h2,
+    #profile-wall>h2,
+    #profile-gallery>h2,
+    #profile-video>h2 {
+
+        font-size: 2em;
+    }
+
+    #profile-wall-sender input[type='text'] {
+        width: 70%;
+
+        margin-top: 7%;
+
+    }
+
+    .image-container img {
+        height: 108%;
+
+    }
+
+    .image-container {
+
+        height: 219px;
+    }
+
+    #profile-lastname,
+    #profile-firstname {
+        font-size: 1.5em;
+    }
+
+    .header_profil {
+        height: 667px;
+
+    }
+
+    #profile-gallery>div.option-gallery>button,
+    #profile-video>div.option-video>button,
+    #profile-music>div.option-music>button {
+        font-size: 0.85em;
+        width: 35%;
+
+    }
+
+}
