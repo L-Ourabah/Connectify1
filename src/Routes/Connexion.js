@@ -6,14 +6,13 @@ import React from 'react';
 
 export default function Connexion() {
     return (
-       
+
         <>
-     <Header/>
-     <Main/>
-     <Footer/>
-     </>
+            <Header />
+            <Main />
+            <Footer />
+        </>
     );
 
 }
 
- 
