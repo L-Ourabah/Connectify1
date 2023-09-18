@@ -31,7 +31,7 @@ export default function Header() {
             <h1 >Connectify</h1>
             <Link to={'/profil'}>Profil</Link>
             <Link to={'../contact'}>Contact</Link>
-            <Link to={'../connexion'}>Connexion</Link>
+            <Link to={'../deconnexion'}>Deconnexion</Link>
           </div>
 
         </div>
