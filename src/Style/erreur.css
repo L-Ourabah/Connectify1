@@ -1,0 +1,36 @@
+/*erreur*/
+.erreur_page {
+    height: 100Vh;
+  
+    background-image: url(./media/img/erreur_page.jpg);
+    background-position: center;
+  
+  
+    display: flex;
+  
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .erreur_page p {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  .erreur_page h1 {
+    background-color: rgba(17, 18, 18, 0.273);
+    border-radius: 25px;
+    font-size: 4.5em;
+    font-weight: bold;
+    color: rgb(250, 250, 250);
+  }
+  
+  .erreur_page img {
+    width: 720px;
+    object-fit: cover;
+    height: 620px;
+  }
+
+
+
