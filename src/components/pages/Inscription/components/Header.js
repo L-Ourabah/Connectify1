@@ -16,6 +16,9 @@ function closeNav() {
 
 export default function Header() {
   return (
+
+
+
     <header className="header_connexion">
       <nav className="navbar_deux">
         <h1 >Connectify</h1>
@@ -25,11 +28,13 @@ export default function Header() {
           <Link className="btn_inscription" to={'../inscription'}>Inscription</Link>
         </div>
 
+
         {/*menu mobile*/}
+
         <span className='burgerMenu' onClick={openNav}>☰ </span>
         <div id="myNav" className="overlay">
-        {/* Utilisation d'un bouton pour fermer le menu mobile */}
-        <button className="closebtn" onClick={closeNav}>×</button>
+          {/* Utilisation d'un bouton pour fermer le menu mobile */}
+          <button className="closebtn" onClick={closeNav}>×</button>
           <div className="overlay-content">
             <h1 >Connectify</h1>
             <Link to={'/'}>Accueil</Link>
@@ -39,6 +44,9 @@ export default function Header() {
 
         </div>
 
+
+
+       
       </nav>
     </header>
   );
