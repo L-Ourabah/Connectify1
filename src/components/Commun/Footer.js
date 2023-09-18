@@ -1,6 +1,7 @@
 
 import React from 'react';
 import '../../App.css';
+import '../../appResponsive.css';
 
 
 function Footer(){
@@ -8,7 +9,7 @@ function Footer(){
     
         <footer>
 <div className="footer">
-    <p>© 2023 Connectify. Tous Droits Réservés.</p>
+    <p>© 2023 Connectify. Tous Droits Réservés | Ourabah Lounnas</p>
 </div>
 </footer>
     );
