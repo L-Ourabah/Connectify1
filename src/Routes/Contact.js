@@ -5,12 +5,12 @@ import React from 'react';
 
 export default function Contact() {
     return (
-       
+
         <>
-     <Header/>
-     <Main/>
-     <Footer/>
-     </>
+            <Header />
+            <Main />
+            <Footer />
+        </>
     );
 
 }
