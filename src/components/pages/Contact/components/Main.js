@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledH2 } from './contact-styled'; // Importez le composant Styled Components
+import { StyledH2 } from '../../../../styled-components/contact-styled';
 import '../../../../App.css';
 import '../../../../appResponsive.css';
 import imgContact from '../../../../media/img/fd_contact.jpg'
@@ -9,12 +9,12 @@ export default function Main() {
 
     return (
         <main>
-            <section className="contact2">
+            <section className="contact_pg">
                 <div className="contact_gauche">
                     <img src={imgContact} alt="img_contact" />
                 </div>
-                <div className="contact_droite">
-                <StyledH2>Nous Contacter</StyledH2>
+                <div className="droite">
+                    <StyledH2>Nous Contacter</StyledH2>
                     <form method="POST" >
                         <div className="content_form">
                             <div className='label_email'>
