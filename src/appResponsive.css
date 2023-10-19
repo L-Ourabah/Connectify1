@@ -1,4 +1,4 @@
-@media  (max-width: 760px) {
+@media (max-width: 760px) {
 
     .header_1 {
         height: 790px;
@@ -9,9 +9,10 @@
     }
 
     .container h1 {
-        font-size: 85px;
+        font-size: 6em;
     }
-/************************* nav bar***********************************/
+
+    /************************* nav bar***********************************/
 
     .navbar_profil .burgerMenu {
         font-size: 44px;
@@ -53,11 +54,12 @@
         padding: 23px;
 
     }
+
     .navbar_profil .overlay .closebtn {
         font-size: 46px;
         top: 2%;
-        right: 35px;    
-      }
+        right: 35px;
+    }
 
     .overlay .closebtn {
         font-size: 3em;
@@ -69,18 +71,18 @@
         margin-top: -105px;
     }
 
- /**************************************************footer************************/
+    /**************************************************footer************************/
 
-  
 
-.footer p  {
-    font-size: 0.7em;
-   
-}
+
+    .footer p {
+        font-size: 0.7em;
+
+    }
 
 
     /********************************************home******************************/
-    
+
     /************************************...bienvenue**********/
 
     .bienvenue {
@@ -194,7 +196,7 @@
         height: 65px;
     }
 
-   
+
 
 
 
@@ -269,36 +271,46 @@
 
 
     /****************************************inscription**************************************************/
-.inscription {
-    flex-direction: column;
-      width: 100%;
-  }
+    .inscription {
+        flex-direction: column;
+        width: 100%;
+    }
 
-.inscription img {
-    width: 390px;
-    height: 323px;
-    object-position: top;
-}
-.inscription h2 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 35px;
-}
+    .inscription img {
+        width: 390px;
+        height: 323px;
+        object-position: top;
+    }
 
-  .content_form_inscription{
-    width: 329px;
-  }
+    .inscription h2 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 35px;
+    }
 
-  .content_name {
-    flex-direction: column;
-  
-}
-.content_form_inscription input[type="text"] ,.content_form_inscription input[type="password"],.label_email input[type="email"]{
-    width: 265px;
-    height: 38px;
-}
+    .content_form_inscription {
+        width: 329px;
+    }
 
-.content_form_inscription label ,.content_form_connexion label {
-    font-size: 20px;
-}
+    .content_name {
+        flex-direction: column;
+
+    }
+
+    .content_form_inscription input[type="text"],
+    .content_form_inscription input[type="password"],
+    .label_email input[type="email"] {
+        width: 265px;
+        height: 38px;
+    }
+
+    .content_form_inscription label,
+    .content_form_connexion label {
+        font-size: 20px;
+    }
+
+
+
+
+
 }

@@ -6,6 +6,7 @@ import { v4 } from 'uuid';
 import '../../../../Style/profil.css';
 
 function SectionMusic() {
+    // États pour gérer les musiques et le téléchargement
     const [musicUpload, setMusicUpload] = useState(null);
     const [musicList, setMusicList] = useState([]);
     const [musicTitle, setMusicTitle] = useState('');
@@ -43,6 +44,7 @@ function SectionMusic() {
         fetchMusicFromFirestore();
     }, []);
 
+    // Fonction pour télécharger une nouvelle musique
     const uploadMusic = async () => {
         if (musicUpload == null) return;
 
@@ -54,7 +56,7 @@ function SectionMusic() {
 
             setMusicList((prev) => [...prev, url]);
 
-            // Demandez à l'utilisateur de choisir le titre
+            // Demandez à l'utilisateur de choisir le titre de la musique
             const userMusicTitle = prompt('Choisissez un titre pour la musique :');
 
             if (userMusicTitle) {
@@ -73,6 +75,7 @@ function SectionMusic() {
         }
     };
 
+    // Fonction pour gérer la sélection d'un fichier musique
     const handleFileInputChange = (event) => {
         const selectedMusic = event.target.files[0];
         setMusicUpload(selectedMusic);
@@ -82,6 +85,7 @@ function SectionMusic() {
         <div id="profile-music">
             <h2>Music</h2>
             <div className='option-music'>
+                {/* Input pour sélectionner un fichier musique */}
                 <input
                     type="file"
                     accept="audio/*"
@@ -90,9 +94,10 @@ function SectionMusic() {
                     id="musicFileInput"
                 />
                 <label htmlFor="musicFileInput">
-                   📁
+                    📁
                 </label>
 
+                {/* Champ pour saisir le titre de la musique */}
                 <input
                     type="text"
                     placeholder="Titre de la musique"
@@ -100,9 +105,11 @@ function SectionMusic() {
                     onChange={(e) => setMusicTitle(e.target.value)}
                 />
 
+                {/* Bouton pour télécharger la musique */}
                 <button onClick={uploadMusic}>Poster la musique</button>
             </div>
             <div id='profile-music-flex'>
+                {/* Affichage des musiques téléchargées */}
                 {musicList.map((url, index) => (
                     <div key={`music-${index}`} className='profile-music-item'>
                         <audio controls>
@@ -117,3 +124,4 @@ function SectionMusic() {
 }
 
 export default SectionMusic;
+

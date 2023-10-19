@@ -87,13 +87,13 @@ export default function Main() {
 
     // Le useEffect ci-dessus se déclenche une seule fois au chargement du composant, récupère les utilisateurs de la collection "users" dans Firebase et les stocke dans l'état "users".
 
-   
+
 
     return (
         <main>
 
 
-            
+
             <section className="inscription">
                 <div className="gauche">
                     <img src={imgInscription} alt="img_inscription " />
@@ -136,7 +136,7 @@ export default function Main() {
                                         placeholder='Entrez votre prénom...'
                                         required
 
-                                   />
+                                    />
                                 </div>
                             </div>
                             <div className='label_email'>
@@ -191,7 +191,7 @@ export default function Main() {
                                     id='femme'
                                     value='femme'
 
-                                 />
+                                />
 
 
                                 <span name="femme">Femme</span>

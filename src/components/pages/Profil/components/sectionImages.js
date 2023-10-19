@@ -52,7 +52,7 @@ function SectionImages() {
       })
     })
   }, []);
- 
+
 
   return (
     <div id='profile-gallery'>

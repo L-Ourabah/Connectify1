@@ -5,25 +5,38 @@ import { doc, updateDoc } from 'firebase/firestore';
 import Avatar from '../../../../media/img/avatar.jpg';
 import '../../../../Style/profil.css';
 
+
 function SectionProfil() {
     const [newImage, setNewImage] = useState(null);
     const [imageUrl, setImageUrl] = useState(null);
     const [user, setUser] = useState(null);
 
     // Obtenir les informations de l'utilisateur actuellement connecté
+
+    // Utilisez le hook 'useEffect' pour surveiller les changements d'état d'authentification.
     useEffect(() => {
+        // Utilisez la méthode 'onAuthStateChanged' pour définir un écouteur sur les changements d'état d'authentification.
         const unsubscribe = auth.onAuthStateChanged((user) => {
+            // La fonction passée à 'onAuthStateChanged' sera appelée chaque fois que l'état d'authentification change.
+
             if (user) {
+                // Si un utilisateur est connecté (authentifié), 'user' sera un objet représentant cet utilisateur.
+                // Vous pouvez effectuer des actions spécifiques pour l'utilisateur connecté ici, par exemple, mettre à jour l'état de l'utilisateur dans votre composant.
                 setUser(user);
             } else {
+                // Si aucun utilisateur n'est connecté (non authentifié), 'user' sera null.
+                // Vous pouvez effectuer des actions spécifiques pour les utilisateurs non connectés ici, par exemple, réinitialiser l'état de l'utilisateur.
                 setUser(null);
             }
         });
 
+        // Le retour de 'useEffect' est une fonction de nettoyage. Elle sera appelée lorsque le composant est démonté ou que le hook 'useEffect' est réexécuté.
+        // Dans ce cas, cela permet de supprimer l'écouteur d'état d'authentification pour éviter les fuites de mémoire.
         return () => {
-            unsubscribe();
+            unsubscribe(); // Arrête d'écouter les changements d'état d'authentification lorsque le composant est démonté ou que 'useEffect' est réexécuté.
         };
-    }, []);
+    }, []); // Le tableau de dépendances est vide, ce qui signifie que ce code ne sera exécuté qu'une seule fois, lors du montage initial du composant.
+
 
     // Fonction pour mettre à jour l'image de profil
     const updateProfileImage = async () => {
@@ -59,14 +72,14 @@ function SectionProfil() {
         <div className='banniere'>
             <div className='cardProfil'>
                 <div className="image-container">
-                    <img src={imageUrl ||Avatar } alt="Photo de profil" />
-                    <input 
-                    
+                    <img src={imageUrl || Avatar} alt="Photo de profil" />
+                    <input
+
                         type="file"
                         accept="image/*"
                         onChange={handleFileChange}
                     />
-                    <button  onClick={updateProfileImage}>{/*Modifier l'image*/}✏️ </button>
+                    <button onClick={updateProfileImage}>{/*Modifier l'image*/}✏️ </button>
                 </div>
                 <div className='name'>
                     <p id='profile-lastname'>LOUNNAS</p>

@@ -1,4 +1,9 @@
 /***********nav bar*******/
+h2 {
+    font-family: 'chicle', cursive;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
 
 .navbar_profil {
     display: flex;
@@ -84,9 +89,11 @@
 #profile-lastname,
 #profile-firstname {
     font-size: 2em;
+    font-family: 'inter', cursive;
+    color: white;
 }
 
-/*******************mainProfil*********************/
+/*******************mainFiltre*********************/
 
 
 
@@ -119,18 +126,21 @@
 
 
 #profile-section-nav>li.active {
-    background-color: rgb(98, 98, 13);
+    background-color: rgb(175, 175, 4);
+    width: 205px;
 }
 
 #profile-section-nav>li {
-    background-color: yellow;
+    background-color: rgb(237, 237, 44);
     border: 2px solid rgb(227, 195, 12);
     width: 200px;
     text-align: center;
     padding: 2%;
+    color: white;
 
 }
-#profile-wall{
+
+#profile-wall {
     margin-bottom: 5%;
 }
 
@@ -247,7 +257,7 @@
     background-color: rgb(219, 208, 208);
 }
 
-#profile-music > div.option-music > input[type=text]{
+#profile-music>div.option-music>input[type=text] {
     background-color: rgb(219, 208, 208);
 }
 
@@ -307,6 +317,7 @@
         margin-bottom: -94px;
         margin-top: -76px;
         height: 217px;
+
     }
 
     #profil-post-section {
@@ -416,6 +427,15 @@
         font-size: 0.85em;
         width: 35%;
 
+    }
+
+    #profile-video>div.option-video>input[type=text] {
+        background-color: rgb(219, 208, 208);
+        width: 40%;
+    }
+
+    #profile-music>div.option-music>input[type=text] {
+        width: 40%;
     }
 
 }

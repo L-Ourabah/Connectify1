@@ -8,6 +8,7 @@ import SectionMusique from './sectionMusique';
 import '../../../../Style/profil.css';
 
 
+
 export default function Main() {
     // État pour gérer l'onglet actif
     const [activeTab, setActiveTab] = useState("all");

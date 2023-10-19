@@ -12,16 +12,23 @@ function SectionVideo() {
     const [videoList, setVideoList] = useState([]);
     const [videoTitle, setVideoTitle] = useState('');
 
+    // Utilisez le hook 'useEffect' pour obtenir les vidéos depuis Firebase Storage lorsque le composant est monté.
     useEffect(() => {
-        // Obtenir les vidéos depuis Firebase Storage
+        // Créez une référence à la liste de vidéos dans Firebase Storage.
         const videoListRef = ref(storage, 'videos/');
 
-        listAll(videoListRef).then((response) => {
-            Promise.all(response.items.map((item) => getDownloadURL(item)))
-                .then((urls) => {
-                    setVideoList(urls);
-                });
-        });
+        // Utilisez la fonction 'listAll' pour obtenir une liste de tous les fichiers dans le répertoire 'videos/'.
+        listAll(videoListRef)
+            .then((response) => {
+                // La réponse contient un tableau d'objets 'items', chaque objet représentant un fichier dans le répertoire.
+
+                // Utilisez 'Promise.all' pour exécuter des requêtes 'getDownloadURL' pour chaque fichier et obtenir les URL de téléchargement.
+                Promise.all(response.items.map((item) => getDownloadURL(item)))
+                    .then((urls) => {
+                        // Une fois que toutes les URL de téléchargement ont été obtenues, vous pouvez les stocker dans l'état de votre composant.
+                        setVideoList(urls);
+                    })
+            });
 
         // Obtenir les vidéos depuis Firestore
         const fetchVideosFromFirestore = async () => {
@@ -41,19 +48,25 @@ function SectionVideo() {
             // Mettre à jour la liste des vidéos
             setVideoList(videos.map((video) => video.url));
         };
-
+        // Déclenche la récupération initiale des vidéos à partir de Firebase Firestore.
         fetchVideosFromFirestore();
     }, []);
 
     const uploadVideo = async () => {
+        // Vérifiez si un fichier vidéo a été sélectionné. S'il est null, ne faites rien.
         if (videoUpload == null) return;
 
+        // Créez une référence au fichier vidéo dans Firebase Storage avec un nom de fichier unique généré par la fonction v4() de la bibliothèque uuid.
         const videoRef = ref(storage, `videos/${videoUpload.name + v4() + '.mp4'}`);
 
         try {
+            // Utilisez la fonction 'uploadBytes' pour télécharger le fichier vidéo vers Firebase Storage. Elle renvoie un objet 'snapshot' qui permet de suivre la progression du téléchargement.
             const snapshot = await uploadBytes(videoRef, videoUpload);
+
+            // Une fois le téléchargement terminé avec succès, utilisez 'getDownloadURL' pour obtenir l'URL de téléchargement de la vidéo.
             const url = await getDownloadURL(snapshot.ref);
 
+            // Mettez à jour la liste des vidéos en ajoutant la nouvelle URL de téléchargement à l'état existant.
             setVideoList((prev) => [...prev, url]);
 
             // Demandez à l'utilisateur de choisir le titre
@@ -76,9 +89,13 @@ function SectionVideo() {
     };
 
     const handleFileInputChange = (event) => {
+        // Récupère le fichier vidéo sélectionné par l'utilisateur à partir de l'événement.
         const selectedVideo = event.target.files[0];
+
+        // Met à jour l'état 'videoUpload' avec le fichier vidéo sélectionné.
         setVideoUpload(selectedVideo);
     };
+
 
     return (
         <div id="profile-video">
@@ -92,7 +109,7 @@ function SectionVideo() {
                     id="videoFileInput"
                 />
                 <label htmlFor="videoFileInput">
-                   {/*Choisissez une vidéo <br/>*/} 📁
+                    {/*Choisissez une vidéo <br/>*/} 📁
                 </label>
 
                 <input

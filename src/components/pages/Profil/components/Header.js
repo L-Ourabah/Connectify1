@@ -30,8 +30,8 @@ export default function Header() {
         {/*menu mobile*/}
         <span className='burgerMenu' onClick={openNav}>☰ </span>
         <div id="myNav" className="overlay">
-         {/* Utilisation d'un bouton pour fermer le menu mobile */}
-        <button className="closebtn" onClick={closeNav}>×</button>
+          {/* Utilisation d'un bouton pour fermer le menu mobile */}
+          <button className="closebtn" onClick={closeNav}>×</button>
           <div className="overlay-content">
             <h1 >Connectify</h1>
             <Link to={'/profil'}>Profil</Link>
@@ -42,8 +42,8 @@ export default function Header() {
         </div>
       </nav>
       <SectionProfil />
-    
-       
+
+
     </header>
   );
 }

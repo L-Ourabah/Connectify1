@@ -1,6 +1,7 @@
-import { Link } from 'react-router-dom'
-import imgErreur from '../media/img/erreur_page.jpg'
-import '../App.css';
+import { Link } from 'react-router-dom';
+import imgErreur from '../media/img/erreur_page.jpg';
+import '../Style/erreur.css';
+
 
 export default function ErrorPage() {
 

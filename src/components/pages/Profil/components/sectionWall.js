@@ -7,7 +7,7 @@ import '../../../../Style/profil.css';
 function SectionWall() {
     const [postText, setPostText] = useState('');
     const [postList, setPostList] = useState([]);
-    
+
     useEffect(() => {
         const fetchPosts = async () => {
             try {
